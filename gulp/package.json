@@ -29,6 +29,7 @@
     "gulp.spritesmith": "^4.1.0",
     "gulp-uglifyjs" : "^0.6.2",
     "imagemin-pngquant": "^5.0.0",
+    "imagemin-jpegoptim" : "^5.0.0",
     "lodash": "^3.10.1",
     "postcss-svg": "^1.0.4",
     "require-dir": "^0.3.0",

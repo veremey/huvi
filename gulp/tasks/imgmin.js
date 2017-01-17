@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var imagemin = require("gulp-imagemin");
 var pngquant = require('imagemin-pngquant');
+var imageminJpegoptim = require('imagemin-jpegoptim');
 var cache = require('gulp-cache');
 var config = require('../config');
 
@@ -11,7 +12,11 @@ gulp.task('img', function() {
       progressive: true,
       // optimizationLevel: 7,
       svgoPlugins: [{removeViewBox: false}],
-      use: [pngquant()]
+      use: [pngquant(),
+            imageminJpegoptim({
+              max: 50,
+              progressive: true
+            })]
     })))
     .pipe(gulp.dest(config.dest.img));
 });
