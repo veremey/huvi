@@ -8,7 +8,8 @@ gulp.task('watch', [
     // 'copy:watch',
     'jade:watch',
     'font:watch',
-    // 'js:watch'
+    // 'js:watch',
+    'img:watch'
 ]);
 
 
@@ -16,4 +17,4 @@ gulp.task('delete', function (cb) {
     rimraf('./'+config.dest.root, cb);
 });
 gulp.task('default', ['server', 'watch'], function() {});
-gulp.task('build', ['jade','font','sprite',/*'copy','js',*/'sass'], function() {});
+gulp.task('build', ['jade','font','sprite',/*'copy','js',*/'sass', 'img'], function() {});
