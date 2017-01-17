@@ -5,13 +5,11 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var notify = require('gulp-notify');
 var mqpacker = require("css-mqpacker");
+var smartgrid = require('smart-grid');
 var config = require('../config');
 
 
-var smartgrid = require('smart-grid');
-
-/* It's principal settings in smart grid project */
-var settings = {
+var smartgridSettings = {
     outputStyle: 'sass', /* less || scss || sass || styl */
     columns: 24, /* number of grid columns */
     offset: "12px", /* gutter width px || % */
@@ -47,8 +45,9 @@ var settings = {
     }
 };
 
-smartgrid('../static/css/sass', settings);
-
+gulp.task('smartgrid', function() {
+    smartgrid('../static/css/sass', smartgridSettings);
+});
 
 gulp.task('sass', function() {
 
@@ -66,6 +65,7 @@ gulp.task('sass', function() {
 
     return sass(config.src.sass+'**/*.sass', {
         sourcemap: false,//true is better
+        // style: 'compact',
         style: 'compressed',
         emitCompileError: true
     })
@@ -79,5 +79,5 @@ gulp.task('sass', function() {
 });
 
 gulp.task('sass:watch', function() {
-    gulp.watch(config.src.sass + '/**/*', ['sass']);
+    gulp.watch(config.src.sass + '**/*', ['sass']);
 });
