@@ -66,7 +66,7 @@ gulp.task('sass', function() {
 
     return sass(config.src.sass+'**/*.sass', {
         sourcemap: false,//true is better
-        style: 'compact',
+        style: 'compressed',
         emitCompileError: true
     })
     .on('error', notify.onError({
