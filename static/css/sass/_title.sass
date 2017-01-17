@@ -1,0 +1,17 @@
+// Normally title styles
+
+.title
+	&__large
+		font-size: 35px
+		line-height: 28px
+		color: $green
+		text-align: center
+		+sr
+		+r(780)
+			line-height: 1
+	&__big
+		@extend .title__large
+		font-size: 50px
+		line-height: .9
+		+r(780)
+			line-height: 1

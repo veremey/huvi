@@ -1,0 +1,87 @@
++font('cedarville-cursive-webfont', 'cedarville-cursive-webfont')
++font('opensans-bold-webfont', 'opensans-bold-webfont')
++font('opensans-italic-webfont', 'opensans-italic-webfont')
++font('opensans-regular-webfont', 'opensans-regular-webfont')
++font('opensans-semibold-webfont', 'opensans-semibold-webfont')
++font('sourcesanspro-bold-webfont', 'sourcesanspro-bold-webfont')
++font('sourcesanspro-it-webfont', 'sourcesanspro-it-webfont')
++font('sourcesanspro-regular-webfont', 'sourcesanspro-regular-webfont')
++font('opensans-light-webfont', 'opensans-light-webfont')
++font('quattrocentosans-regular-webfont', 'quattrocentosans-regular-webfont')
+
+=qc
+	font-family: 'quattrocentosans-regular-webfont', Arial, sans-serif
+=sr
+	font-family: 'sourcesanspro-regular-webfont', Arial, sans-serif
+=sit
+	font-family: 'sourcesanspro-it-webfont', Arial, sans-serif
+=sb
+	font-family: 'sourcesanspro-bold-webfont', Arial, sans-serif
+=os
+	font-family: 'opensans-semibold-webfont', Arial, sans-serif
+=or
+	font-family: 'opensans-regular-webfont', Arial, sans-serif
+=oit
+	font-family: 'opensans-italic-webfont', Arial, sans-serif
+=ol
+	font-family: 'opensans-light-webfont', Arial, sans-serif
+=ob
+	font-family: 'opensans-bold-webfont', Arial, sans-serif
+=cc
+	font-family: 'cedarville-cursive-webfont', Arial, sans-serif
+
+
+// colors
+$n: transparent
+$green: #82b415
+$blue: #3b8fb0
+$text: #3f3f3f
+
+
+a
+	text-decoration: none
+	outline-style: none
+	outline: none
+	&:hover
+		opacity: .7
+
+body
+	min-width: 300px
+	font-family:  Arial, sans-serif
+	font-size: 16px
+	line-height: 1.22
+	+or
+	+r(780)
+		font-size: 18px
+		line-height: 1.4
+
+// common blocks
+
+.out
+	position: relative
+	background-color: #fff
+	// padding-bottom: $footerHeight
+	+clr
+
+.wrapper
+	+wrapper()
+	border-right: 1px solid yellow
+	border-left: 1px solid yellow
+
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em

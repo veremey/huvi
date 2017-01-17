@@ -1,0 +1,28 @@
+mixin icon(name)
+  svg(class="icon icon-" + name)
+    use(xlink:href="#icon-" + name)
+
+doctype html
+html(lang="fi-FI")
+  head
+    meta(charset="utf-8")
+    block title
+      title Huvilaranta
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel="icon" type="image/png" href="img/favicon.png")
+
+    link(rel="stylesheet" media="all" href="static/css/font-awesome.min.css")
+    link(rel="stylesheet" media="all" href="static/css/style.css")
+
+
+  body
+    //BEGIN out
+    block content
+    //END out
+    script(src="static/js/lib/jquery.js")
+    script(src="static/js/lib/slick.min.js")
+    script(src="static/js/lib/ScrollMagic.min.js")
+    script(src="static/js/global.js")
+    script(src="static/js/animations.js")
+    script(src="static/js/init-animations.js")
+    script(src="static/js/init-global.js")

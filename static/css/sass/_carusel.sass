@@ -1,0 +1,62 @@
+.carusel
+	margin-top: 8px
+	text-align: center
+	overflow: hidden
+	+clr
+	&__item
+		position: relative
+		height: 406px
+		overflow: hidden
+		+clr
+	&__pic
+		+coverdiv
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			-webkit-transform: translate3d(-50%, -50%, 0)
+			-ms-transform: translate3d(-50%, -50%, 0)
+			-o-transform: translate3d(-50%, -50%, 0)
+			transform: translate3d(-50%, -50%, 0)
+			min-width: 100%
+			min-height: 100%
+			max-width: none
+	&__content
+		position: absolute
+		bottom: 74px
+		left: 50%
+		width: 100%
+		-webkit-transform: translate3d(-50%, 0, 0)
+		-ms-transform: translate3d(-50%, 0, 0)
+		-o-transform: translate3d(-50%, 0, 0)
+		transform: translate3d(-50%, 0, 0)
+		z-index: 2
+		color: #fff
+	&__quote
+		display: block
+		font-size: 35px
+		line-height: 38px
+		letter-spacing: -.005em
+		+cc
+	&__autor
+		display: inline-block
+		position: relative
+		font-size: 20px
+		line-height: 27px
+		letter-spacing: -.005em
+		margin-top: 15px
+		+sit
+		&::before,
+		&:after
+			content: ''
+			position: absolute
+			top: 50%
+			+try(-50%)
+			width: 8px
+			height: 1px
+			background-color: #fff
+			z-index: 5
+		&:before
+			left: -.8em
+		&:after
+			right: -.8em

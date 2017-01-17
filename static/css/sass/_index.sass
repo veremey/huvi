@@ -1,0 +1,265 @@
+.main
+
+.house
+	padding: 40px 0 70px
+	text-align: center
+	&__header
+		+col()
+		+col-21()
+		margin: 0 auto 55px
+	&_desc
+		font-size: 18px
+		color: $text
+	&__container
+		display: flex
+		+justify-content(center)
+		+flex-direction-sm(column)
+		&.mod_short
+			.villa__heading
+				position: absolute
+				top: 15px
+				left: 0
+				width: 100%
+				line-height: 58px
+				color: #fff
+				background-color: rgba(130, 180, 21, .8)
+				z-index: 5
+				&.mod_blue
+					background-color: rgba(59, 143, 176, .8)
+				&.mod_purpur
+					background-color: rgba(240, 120, 132, .8)
+			.villa__comfort
+				position: absolute
+				left: 0
+				width: 100%
+				bottom: 15px
+				padding: 0 18px
+				text-align: right
+				border-bottom: none
+				&_item
+					border-radius: 100%
+					width: 40px
+					height: 40px
+					background-color: rgba(255, 255, 255, .8)
+					margin-right: 6px
+					color: #424242
+					text-align: center
+				.fa
+					line-height: 40px
+	&.mod_details
+		max-width: 1224px
+		margin: 10px auto 0
+		padding-bottom: 0
+
+a.villa
+	+tr(.4s)
+.villa
+	position: relative
+	+col()
+	+col-8()
+	+col-sm-23()
+	display: flex
+	+flex-direction(column)
+	+align-items(flex-start)
+	margin-bottom: 20px
+	+sm(margin-bottom, 60px)
+	+sm(margin, 0 auto 60px)
+
+
+	&__heading
+		@extend .title__large
+		line-height: 32px
+		width: 100%
+		// align-self: flex-start
+		&.mod_blue
+			color: $blue
+		&.mod_purpur
+			color: #f07884
+		.fa-angle-double-right
+			margin-left: 12px
+			font-size: 28px
+	&__figure
+		margin: 0 auto
+		height: 240px
+		width: 100%
+		position: relative
+		border-radius: 6px
+		overflow: hidden
+		background-color: #ccc
+		+sm(height, 280px)
+		&_img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			min-height: 100%
+			min-width: 100%
+	&__comfort
+		width: 100%
+		padding: 15px
+		border-bottom: 1px solid $text
+
+		&_list
+			display: block
+			font-size: 0
+		&_item
+			display: inline-block
+			vertical-align: top
+			margin: 0 12px
+			font-size: 22px
+			color: $text
+			+ob
+			b
+				display: inline-block
+				margin-left: 7px
+		.fa
+			font-size: 25px
+	&__squre
+		font-size: 18px
+		color: $text
+		margin-top: 12px
+		+r(780)
+			font-size: 20px
+	&__text
+		padding: 20px 5px 70px
+		p
+			color: $text
+	&__btn
+		position: absolute
+		bottom: 0
+		left: 50%
+		+trx(-50%)
+		display: inline-block
+		text-align: center
+		white-space: nowrap
+		padding: 15px 28px
+		font-size: 20px
+		color: #fff
+		background-color: $blue
+		border-radius: 6px
+		+tr(.4s)
+		+sm(width, 100%)
+		&:hover
+			opacity: .8
+		&:active
+			opacity: .8
+			box-shadow: inset 0 0 4px rgba(255, 255, 255, .7), inset 0 0 8px rgba(0, 0, 0, .7)
+
+
+.tourist
+	text-align: center
+	padding: 40px 0 60px
+	&__desc
+		font-style: 18px
+	&__gallery
+		margin-top: 36px
+		font-size: 0
+		+clr
+	&__pic
+		position: relative
+		display: inline-block
+		vertical-align: top
+		padding-top: 15%
+		border-radius: 100%
+		+col()
+		+col-4()
+		+col-sm-10()
+		overflow: hidden
+		+r(780)
+			margin: 0 15px 15px
+			padding-top: 40%
+
+		img
+			+vcenter
+			min-width: 100%
+			min-height: 100%
+
+
+.banner
+	position: relative
+	width: 100%
+	height: 460px
+	color: #fff
+	overflow: hidden
+	&.mod_noHeight
+		height: auto
+	.wrapper
+		height: 100%
+		position: relative
+	&__bg
+		+vcenter
+		min-width: 100%
+		min-height: 100%
+	&__box
+		// +coverdiv
+		padding-top: 50px
+		z-index: 5
+	&__content
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		// +flex-direction(column)
+		justify-content: flex-start
+		align-items: center
+		padding: 0 15px
+		+r(780)
+			display: block
+			+clr
+		&.mod_bottom
+			+r(780)
+				margin-top: 30px
+				margin-bottom: 20px
+
+	&__text
+		flex: 0 0 500px
+		&.mod_small
+			flex: 0 0 420px
+			+r(780)
+				.baner_desc
+					float: left
+					width: 50%
+					font-size: 16px
+					line-height: 18px
+		.title__large
+			text-align: left
+			color: #fff
+	&__figure
+		margin: 0 10px 0 0
+		font-size: 0
+		+r(780)
+			float: left
+			width: 40%
+			img
+				max-width: 100%
+	&__title
+		font-size: 18px
+		left: 30px
+		color: #fff
+		+ob
+	&_desc
+		font-size: 18px
+		+or
+
+
+.detail_link
+	position: relative
+	display: inline-block
+	font-size: 20px
+	color: $blue
+	+sb
+	&:hover
+		opacity: .9
+		+tr(.4s)
+	.fa-angle-double-right
+		font-size: .8em
+		margin-left: 10px
+		color: inherit
+	&.mod_green
+		color: #b6d96a
+
+.see__next
+	.fa-angle-down
+		margin-left: 10px
+		font-size: .8em

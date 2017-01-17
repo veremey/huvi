@@ -1,0 +1,44 @@
+header.header
+	.header__top
+		.wrapper
+			.header__row
+				a(href="/").header__logo
+					img(src="static/img/logo.svg", alt="logo")
+					span Ihanat vuokrahuvilat rannalla!
+				.header__toggler
+				.header__menu
+					ul.header__lang
+						li.header__lang_item.is_active
+							a(href="").header__lang_link Suomeksi
+						li.header__lang_item
+							a(href="").header__lang_link In English
+						li.header__lang_item
+							a(href="").header__lang_link Russian
+					nav.header__nav
+						ul.header__list
+							li.header__list_item.is_active
+								a.header__list_link(href="#") Etusivu
+							li.header__list_item
+								a.header__list_link(href="#") Huvilat
+							li.header__list_item
+								a.header__list_link(href="#") Aktiviteetit
+							li.header__list_item
+								a.header__list_link(href="#") Marjatila
+							li.header__list_item
+								a.header__list_link(href="#") Yhteystiedot
+	.header__bottom
+		.wrapper
+			.header__row
+				.header__tree
+					.header__tree_list
+						h4.header__tree_heading Ajankohtaista:
+						a(href="").header__tree_link 1.1.2015 Hyvää Uutta Vuotta 2015!
+							i.fa.fa-angle-double-right
+						a(href="").header__tree_link Lue lisää
+				.header__contact
+					a(href="tel:+358 40 707 5783" ).header__contact_link
+						i.fa.fa-phone
+						|+358 40 707 5783
+					a(href="" target='_blank' ).header__contact_link
+						i.fa.fa-facebook-square
+						|Facebook

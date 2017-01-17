@@ -1,0 +1,260 @@
+// Normally header styles
+
+.fa-camera-retro
+	font-size: 50px
+	color: green
+.header
+	position: fixed
+	background-color: #FFF
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 50
+	+r(1000)
+		padding-top: 20px
+	&__wrapper
+		+wrapper()
+		border-right: 1px solid yellow
+		border-left: 1px solid yellow
+	&__row
+		+row-flex()
+		+justify-content(space-between)
+		// +justify-content-lg(center)
+		+align-items(center)
+		padding: 0 15px
+
+	&__logo
+		+flex(0 0 280px)
+		+flex-lg(0 0 auto)
+		align-items: flex-start
+		+tr(.4s)
+		+r(400)
+			display: block
+			width: 190px
+			font-size: 14px
+		span
+			color: #777
+			+ol
+	&__toggler
+		display: none
+		cursor: pointer
+		&.is_active
+			z-index: 600
+			&:before,
+			&:after
+				border-color: #fff
+			&:before
+				border-bottom-color: $n!important
+				transform-origin: 0 40%
+				+rotate(45)
+			&:after
+				border-top-color: $n!important
+				transform-origin: 5% 70%
+				+rotate(-45)
+		+r(780)
+			display: block
+			position: fixed
+			top: 20px
+			right: 20px
+			width: 50px
+			height: 40px
+			&:before,
+			&:after
+				content: ''
+				position: absolute
+				left: 0
+				width: 100%
+				height: 50%
+			&:before
+				top: 0
+				border-top: 4px solid #000
+				border-bottom: 2px solid #000
+			&:after
+				top: 50%
+				border-top: 2px solid #000
+				border-bottom: 4px solid #000
+			&:hover:before,
+			&:hover:after
+				border-color: $blue
+				+tr(.4s)
+	&__menu
+		+flex(0 0 630px)
+		+flex-lg(0 0 100%)
+		+r(780)
+			display: none
+		&.is_opened
+			display: block
+			position: fixed
+			overflow: hidden
+			height: 100vh
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: rgba(0, 0, 0, .9)
+			z-index: 300
+	&__lang
+		font-size: 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		+justify-content(flex-end)
+		+align-items(center)
+		margin-top: 10px
+		+r(1000)
+			position: absolute
+			top: 20px
+			right: 22px
+		+r(780)
+			display: block
+			width: 100%
+			top: 100px
+			right: 0
+			text-align: center
+
+		&_item
+			position: relative
+			display: inline-block
+			vertical-align: top
+			padding: 0 10px
+			border-right: 1px solid #4083a2
+			&:last-child
+				padding-right: 0
+				border: none
+		&_item.is_active &_link
+			cursor: default
+			+ob
+			&:hover
+				opacity: 1
+		&_link
+			font-size: 13px
+			letter-spacing: -.025em
+			color: #4083a2
+			line-height: 14px
+			+r(780)
+				font-size: 16px
+				line-height: 1.1
+
+	&__list
+		font-size: 0
+		margin: 15px 0 35px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		+justify-content(space-between)
+		+align-items(center)
+		+r(780)
+			height: 100vh
+			display: block
+
+		&_item
+			vertical-align: top
+			+r(780)
+				width: 100vw
+				position: relative
+				top: 50%
+				+try(-50%)
+				text-align: center
+
+		&_link
+			display: block
+			font-size: 18px
+			line-height: 32px
+			color: #484848
+			letter-spacing: 0.01em
+			text-transform: uppercase
+			border-bottom: 3px solid $n
+			+or
+			+r(780)
+				font-size: 30px
+				line-height: 1.2
+				color: #FFF
+				margin-bottom: .5em
+			&:hover
+				border-color: #cddde4
+				opacity: 1
+		&_item.is_active &_link
+			border-color: #5a8da7
+
+	&__bottom
+		background-color: $green
+		+r(780)
+			margin-top: 20px
+
+	&__tree
+		+row-flex()
+		+justify-content(flex-start)
+		+align-items(center)
+		flex: 0 0 auto
+		max-width: 100%
+		&_heading
+			display: inline-block
+			color: #fff
+			line-height: 45px
+			font-size: 18px
+			letter-spacing: -0.025em
+			margin: 0 10px 0 0
+			+os
+		&_list
+			font-size: 0
+			flex: 0 0 auto
+			max-width: 100%
+			+r(780)
+				display: none
+		&_item
+			position: relative
+			display: inline-block
+			&:not(:last-child)
+				margin-right: 30px
+				&:after
+					content: '\00BB'
+					font-size: 20px
+					position: absolute
+					top: 48%
+					right: -18px
+					+try(-50%)
+					color: #fff
+					+ol
+		&_link
+			position: relative
+			display: inline-block
+			font-size: 18px
+			letter-spacing: -.025em
+			color: #FFF
+			line-height: 45px
+			+ol
+			&:not(:last-child)
+				margin-right: 10px
+			.fa-angle-double-right
+				font-size: 20px
+				color: #fff
+				margin-left: 10px
+
+			&:hover
+				opacity: 1
+				text-decoration: underline
+
+	&__contact
+		+flex(0 0 auto)
+		text-align: right
+		+r(780)
+			padding: 15px 0 0 0
+			width: 100%
+		&_link
+			color: #fff
+			&:not(:last-child)
+				margin-right: 30px
+			&:hover
+				+tr(.4s)
+			+r(780)
+				margin: 0 0 15px 0!important
+				display: block
+				text-align: center
+			.fa
+				font-size: 20px
+				margin-right: 6px
+
