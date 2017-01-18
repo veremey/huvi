@@ -11,6 +11,45 @@ html(lang="fi-FI")
     meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
     link(rel="icon" type="image/png" href="img/favicon.png")
 
+    script.
+        console.time && console.time('fontLoading');
+    script.
+        function loadFont(a,b,c) {
+            function d() {
+                if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")', {});return a.load(),"loading"===a.status}
+
+            var e=navigator.userAgent,f=!window.addEventListener||e.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!e.match(/Chrome/);if(!f) {
+                var g= {
+                }
+
+                ;try {
+                    g=localStorage|| {
+                    }
+                }
+
+                catch(h) {
+                }
+
+                var i="x-font-"+a,j=i+"url",k=i+"css",l=g[j],m=g[k],n=document.createElement("style");if(n.rel="stylesheet",document.head.appendChild(n),!m||l!==b&&l!==c) {
+                    var o=c&&d()?c: b,p=new XMLHttpRequest;
+                    p.open("GET",o),p.onload=function() {
+                        p.status>=200&&p.status<400&&(g[j]=o,g[k]=n.textContent=p.responseText)}
+
+                    ,p.send()}
+
+                else n.textContent=m}
+        //- }
+
+    script.
+        loadFont('opensans-regular', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
+        loadFont('opensans-light', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
+        loadFont('opensans-bold', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
+        loadFont('opensans-italic', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
+        loadFont('quattrocentosans-regular.woff', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
+    script.
+        console.timeEnd && console.timeEnd('fontLoading');
+
+
     link(rel="stylesheet" media="all" href="static/css/font-awesome.min.css")
     //- link(rel="stylesheet" media="all" href="static/css/smart-grid.css")
     link(rel="stylesheet" media="all" href="static/css/style.css")
