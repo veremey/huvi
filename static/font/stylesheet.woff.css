@@ -11,6 +11,13 @@
 }
 
 
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('opensans-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 @font-face {
