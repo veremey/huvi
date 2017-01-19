@@ -41,12 +41,12 @@
       
     </script>
     <script>
-      loadFont('opensans-regular', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont(['opensans-regular', 'opensans-light', 'opensans-bold', 'opensans-semibold', 'opensans-italic', 'quattrocentosans-regular.woff'], 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
       //- loadFont('fontawesome-webfont.woff', 'static/css/font-awesome.min.css', 'static/css/font-awesome.min.css')
     </script>
     <script>
@@ -173,6 +173,6 @@
       </footer>
     </div>
     <!--END out-->
-    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/libs.min.js" defer></script>
   </body>
 </html>

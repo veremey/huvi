@@ -47,19 +47,19 @@ html(lang="fi-FI")
          }
 
     script.
-        loadFont('opensans-regular', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-        loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-        loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-        loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-        loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-        loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        loadFont(['opensans-regular', 'opensans-light', 'opensans-bold', 'opensans-semibold', 'opensans-italic', 'quattrocentosans-regular.woff'], 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        //- loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        //- loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        //- loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        //- loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+        //- loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
         //- loadFont('fontawesome-webfont.woff', 'static/css/font-awesome.min.css', 'static/css/font-awesome.min.css')
     script.
         console.timeEnd && console.timeEnd('fontLoading');
 
 
     //- link(rel="stylesheet" media="all" href="static/css/font-awesome.css")
-    //- link(rel="stylesheet" media="all" href="static/css/smart-grid.css")
+
     link(rel="stylesheet" media="all" href="static/css/style.css")
 
 
@@ -67,7 +67,7 @@ html(lang="fi-FI")
     //BEGIN out
     block content
     //END out
-    script(src="static/js/libs.min.js")
+    script(src="static/js/libs.min.js" defer)
     //- script(src="static/js/lib/slick.min.js")
     //- //- script(src="static/js/lib/ScrollMagic.min.js")
     //- script(src="static/js/global.js")
