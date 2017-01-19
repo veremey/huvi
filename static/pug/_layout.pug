@@ -15,12 +15,12 @@ html(lang="fi-FI")
         console.time && console.time('fontLoading');
     script.
         function loadFont(a, b, c) {
-            (function d() {
+            function d() {
                 if (!window.FontFace) return !1;
                 var a = new FontFace("t", 'url("data:application/font-woff2,") format("woff2")', {});
                 a.load();
                 return a.status === "loading";
-            })(this);
+            };
 
             var e = navigator.userAgent,
                 f = !window.addEventListener || e.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/) && !e.match(/Chrome/);
@@ -40,9 +40,9 @@ html(lang="fi-FI")
                     var o = c && d() ? c : b,
                         p = new XMLHttpRequest;
                     p.open("GET", o), p.onload = function() {
-                        p.status >= 200 && p.status < 400 && (g[j] = o, g[k] = n.textContent = p.responseText)
-                    }, p.send()
-                } else n.textContent = m
+                        p.status >= 200 && p.status < 400 && (g[j] = o, g[k] = n.textContent = p.responseText);
+                    }, p.send();
+                } else n.textContent = m;
             }
          }
 
