@@ -41,12 +41,12 @@
       
     </script>
     <script>
-      loadFont(['opensans-regular', 'opensans-light', 'opensans-bold', 'opensans-semibold', 'opensans-italic', 'quattrocentosans-regular.woff'], 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-regular', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
       //- loadFont('fontawesome-webfont.woff', 'static/css/font-awesome.min.css', 'static/css/font-awesome.min.css')
     </script>
     <script>
@@ -54,7 +54,10 @@
       
       
     </script>
-    <link rel="stylesheet" media="all" href="static/css/style.css">
+    <link rel="preload" href="static/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" media="all" href="static/css/style.css">
+    </noscript>
   </head>
   <body>
     <!--BEGIN out-->
@@ -173,6 +176,6 @@
       </footer>
     </div>
     <!--END out-->
-    <script src="static/js/libs.min.js" defer></script>
+    <script src="static/js/libs.min.js"></script>
   </body>
 </html>
