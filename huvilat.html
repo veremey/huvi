@@ -33,21 +33,21 @@
                   var o = c && d() ? c : b,
                       p = new XMLHttpRequest;
                   p.open("GET", o), p.onload = function() {
-                      p.status >= 200 && p.status < 400 && (g[j] = o, g[k] = n.textContent = p.responseText);
-                  }, p.send();
-              } else n.textContent = m;
+                      p.status >= 200 && p.status < 400 && (g[j] = o, g[k] = n.textContent = p.responseText)
+                  }, p.send()
+              } else n.textContent = m
           }
        }
       
     </script>
     <script>
-      loadFont('opensans-regular', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('opensans-light', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('opensans-bold', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('opensans-semibold', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('opensans-italic', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('quattrocentosans-regular.woff', '/static/font/stylesheet.woff.css', '/static/font/stylesheet.woff2.css')
-      loadFont('fontawesome-webfont.woff', '/static/css/font-awesome.min.css', '/static/css/font-awesome.min.css')
+      loadFont('opensans-regular', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
+      //- loadFont('fontawesome-webfont.woff', 'static/css/font-awesome.min.css', 'static/css/font-awesome.min.css')
     </script>
     <script>
       console.timeEnd && console.timeEnd('fontLoading');
