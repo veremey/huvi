@@ -20,7 +20,7 @@ html(lang="fi-FI")
         console.timeEnd && console.timeEnd('fontLoading');
 
     script.
-        !function(a){"use strict";var b=function(b,c,d){function j(a){return e.body?a():void setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);var edfr = onloadCSS("static/css/font-awesome.min.css");onloadCSS( ss, function() {document.body.innerHTML += '<h1>onload!!!</h1>';});
+        function onloadCSS(a,b){function d(){!c&&b&&(c=!0,b.call(a))}var c;a.addEventListener&&a.addEventListener("load",d),a.attachEvent&&a.attachEvent("onload",d),"isApplicationInstalled"in navigator&&"onloadcssdefined"in a&&a.onloadcssdefined(d)}var edfr = onloadCSS("static/css/font-awesome.min.css");
 
     //- link(rel="stylesheet" media="all" href="static/css/font-awesome.min.css")
     link(rel="stylesheet" media="all" href="static/css/style.css")
