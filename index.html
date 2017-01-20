@@ -6,58 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <script>console.time && console.time('fontLoading');</script>
-    <script>
-      function loadFont(a, b, c) {
-          function d() {
-              if (!window.FontFace) return !1;
-              var a = new FontFace("t", 'url("data:application/font-woff2,") format("woff2")', {});
-              a.load();
-              return a.status === "loading";
-          };
-      
-          var e = navigator.userAgent,
-              f = !window.addEventListener || e.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/) && !e.match(/Chrome/);
-          if (!f) {
-              var g = {};
-              try {
-                  g = localStorage || {}
-              } catch (h) {}
-      
-              var i = "x-font-" + a,
-                  j = i + "url",
-                  k = i + "css",
-                  l = g[j],
-                  m = g[k],
-                  n = document.createElement("style");
-              if (n.rel = "stylesheet", document.head.appendChild(n), !m || l !== b && l !== c) {
-                  var o = c && d() ? c : b,
-                      p = new XMLHttpRequest;
-                  p.open("GET", o), p.onload = function() {
-                      p.status >= 200 && p.status < 400 && (g[j] = o, g[k] = n.textContent = p.responseText)
-                  }, p.send()
-              } else n.textContent = m
-          }
-       }
-      
-    </script>
-    <script>
-      loadFont('opensans-regular', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-light', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-bold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-semibold', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('opensans-italic', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      loadFont('quattrocentosans-regular.woff', 'static/fonts/stylesheet.woff.css', 'static/fonts/stylesheet.woff2.css')
-      //- loadFont('fontawesome-webfont.woff', 'static/css/font-awesome.min.css', 'static/css/font-awesome.min.css')
-    </script>
+    <script>function loadFont(a,b,c){function d(){if(!window.FontFace)return!1;var a=new FontFace("t",'url("data:application/font-woff2,") format("woff2")',{});return a.load(),"loading"===a.status}var e=navigator.userAgent,f=!window.addEventListener||e.match(/(Android (2|3|4.0|4.1|4.2|4.3))|(Opera (Mini|Mobi))/)&&!e.match(/Chrome/);if(!f){var g={};try{g=localStorage||{}}catch(a){}var h="x-font-"+a,i=h+"url",j=h+"css",k=g[i],l=g[j],m=document.createElement("style");if(m.rel="stylesheet",document.head.appendChild(m),!l||k!==b&&k!==c){var n=c&&d()?c:b,o=new XMLHttpRequest;o.open("GET",n),o.onload=function(){o.status>=200&&o.status<400&&(g[i]=n,g[j]=m.textContent=o.responseText)},o.send()}else m.textContent=l}}</script>
+    <script>loadFont("opensans-regular","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css"),loadFont("opensans-light","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css"),loadFont("opensans-bold","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css"),loadFont("opensans-semibold","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css"),loadFont("opensans-italic","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css"),loadFont("quattrocentosans-regular.woff","static/fonts/stylesheet.woff.css","static/fonts/stylesheet.woff2.css");</script>
     <script>
       console.timeEnd && console.timeEnd('fontLoading');
       
-      
     </script>
-    <link rel="preload" href="static/css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-      <link rel="stylesheet" media="all" href="static/css/style.css">
-    </noscript>
+    <link rel="stylesheet" media="all" href="static/css/font-awesome.css">
+    <link rel="stylesheet" media="all" href="static/css/style.css">
   </head>
   <body>
     <!--BEGIN out-->
@@ -176,6 +132,6 @@
       </footer>
     </div>
     <!--END out-->
-    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/app.min.js"></script>
   </body>
 </html>

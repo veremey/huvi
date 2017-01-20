@@ -40,42 +40,27 @@ $(function () {
 					class: 'is_animated'
 				},
 				el7: {
-					selector: '.footer__locate',
-					triggerHook: .8,
-					class: 'is_animated'
-				},
-				el8: {
-					selector: '.footer__text',
-					triggerHook: .8,
-					class: 'is_animated'
-				},
-				el9: {
-					selector: '.footer__copy',
-					triggerHook: 1,
-					class: 'is_animated'
-				},
-				el10: {
 					selector: '.carusel',
 					triggerHook: .8,
 					class: 'is_animated'
 				},
 
-				el11: {
+				el8: {
 					selector: '.title__large',
 					triggerHook: .8,
 					class: 'is_animated'
 				},
-				el12: {
+				el9: {
 					selector: '.tourist__pic',
 					triggerHook: .8,
 					class: 'is_animated'
 				},
-				el13: {
+				el10: {
 					selector: '.banner__content',
 					triggerHook: .8,
 					class: 'is_animated'
 				},
-				el14: {
+				el11: {
 					selector: '.villa__heading',
 					triggerHook: .8,
 					class: 'is_animated'

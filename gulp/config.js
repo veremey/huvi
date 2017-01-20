@@ -3,7 +3,7 @@ module.exports = {
     root    : '../static/',
     pug    : '../static/pug',
     sass    : '../static/css/sass/',
-    js      : '../static/js/',
+    js      : '../static/js/scripts/',
     img     : '../static/img/',
     helpers : '../helpers/'
   },
